@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal and modern React + TypeScript project powered by Vite. It provides a fast development experience with Hot Module Replacement (HMR), TypeScript support, and ESLint.
 
-Currently, two official plugins are available:
+🚀 Features
+⚛️ React
+🟦 TypeScript
+⚡ Vite
+🔥 Hot Module Replacement (HMR)
+🧹 ESLint
+📦 Modern frontend development setup
+🛠️ React Plugins
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project can use either of the official Vite React plugins:
 
-## React Compiler
+@vitejs/plugin-react — uses Babel (or Oxc with Rolldown Vite) for Fast Refresh.
+@vitejs/plugin-react-swc — uses SWC for Fast Refresh and fast compilation.
+⚛️ React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The React Compiler is not enabled by default because it can affect development and build performance. It can be added later when compiler-based optimizations are required.
 
-## Expanding the ESLint configuration
+🧹 ESLint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+For production applications, the ESLint configuration can be extended with type-aware rules such as recommendedTypeChecked, strictTypeChecked, and stylisticTypeChecked. React-specific linting can also be added with eslint-plugin-react-x and eslint-plugin-react-dom.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📦 Installation
+git clone <your-repository-url>
+cd <project-folder>
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+▶️ Development
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Start the development server:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🏗️ Production Build
+npm run build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔍 Lint
+npm run lint
+
+👀 Preview
+npm run preview
+
+📁 Project Structure
+src/
+├── assets/
+├── App.tsx
+├── main.tsx
+└── ...
+
+public/
+package.json
+vite.config.ts
+eslint.config.js
+tsconfig.json
+
+💻 Tech Stack
+
+React • TypeScript • Vite • ESLint
+
+Built with React, TypeScript, and Vite. 🚀
